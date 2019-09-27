@@ -1,0 +1,39 @@
+{
+  "name": "utilitify",
+  "version": "1.0.0",
+  "description": "The utilities for working with a collections such as objects, arrays and primitives such as numbers, strings, etc.",
+  "main": "index.js",
+  "repository": "https://github.com/xcritical-software/utilitify.git",
+  "author": "XCritical Software",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --config=jest.config.js",
+    "lint": "eslint --ext .ts src",
+    "lint:fix": "yarn lint --fix",
+    "compile": "gulp --cwd . compile",
+    "build": "yarn clean && yarn compile",
+    "deploy": "npm publish .publish  --access public",
+    "check": "yarn lint && yarn test",
+    "clean": "rimraf dist lib .publish",
+    "re-install": "yarn clean && rd /s/q node_modules && yarn"
+  },
+  "private": false,
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/kind-of": "^6.0.0",
+    "@xcritical/eslint-plugin-xc-front-lint": "^1.0.1",
+    "@xcritical/xc-front-libs-utils": "^1.0.0",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.0",
+    "ts-jest": "^24.1.0"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "yarn lint:fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "kind-of": "^6.0.2"
+  }
+}
