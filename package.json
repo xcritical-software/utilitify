@@ -4,7 +4,20 @@
   "description": "The utilities for working with a collections such as objects, arrays and primitives such as numbers, strings, etc.",
   "main": "index.js",
   "repository": "https://github.com/xcritical-software/utilitify.git",
+  "bugs": {
+    "url": "https://github.com/xcritical-software/utilitify/issues"
+  },
   "author": "XCritical Software",
+  "contributors": [
+    {
+      "name": "Mikhail Andreev",
+      "url": "https://github.com/tundraray"
+    },
+    {
+      "name": "Alexander Zimin",
+      "url": "https://github.com/zima-snow"
+    }
+  ],
   "license": "MIT",
   "scripts": {
     "test": "jest --config=jest.config.js",
@@ -25,15 +38,47 @@
     "@xcritical/xc-front-libs-utils": "^1.0.0",
     "jest": "^24.9.0",
     "lint-staged": "^9.4.0",
+    "semantic-release": "^15.13.24",
     "ts-jest": "^24.1.0"
   },
+  "dependencies": {
+    "kind-of": "^6.0.2"
+  },
+  "keywords": [
+    "utilitify",
+    "util",
+    "utils",
+    "object",
+    "objects",
+    "array",
+    "arrays",
+    "collection",
+    "collections",
+    "clone",
+    "clone-deep",
+    "copy",
+    "deep",
+    "deep-clone",
+    "deep-merge",
+    "extend",
+    "key",
+    "keys",
+    "merge",
+    "merge-deep",
+    "prop",
+    "properties",
+    "property",
+    "props",
+    "value",
+    "values",
+    "union",
+    "array-union",
+    "deep-shallow"
+  ],
   "lint-staged": {
     "*.{js,ts}": [
       "yarn lint:fix",
       "git add"
     ]
-  },
-  "dependencies": {
-    "kind-of": "^6.0.2"
   }
 }
