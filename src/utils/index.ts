@@ -21,3 +21,5 @@ export {
 
 export * from './isObject';
 export * from './difference';
+export * from './delIn';
+export * from './setIn';
