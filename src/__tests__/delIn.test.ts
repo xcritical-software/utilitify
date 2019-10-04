@@ -32,8 +32,8 @@ describe('This is the tests for the "delIn" util', () => {
       c: [{}],
     });
 
-    expect(delIn({d: 5}, 'd')).toEqual({});
-    expect(delIn({d: [3]}, 'd.0')).toEqual({d: []});
+    expect(delIn({ d: 5 }, 'd')).toEqual({});
+    expect(delIn({ d: [3] }, 'd.0')).toEqual({ d: [] });
     expect(delIn(obj2, '')).toEqual(obj2);
   });
 
