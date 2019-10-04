@@ -21,6 +21,7 @@
   "devDependencies": {
     "@types/jest": "^24.0.18",
     "@types/kind-of": "^6.0.0",
+    "@types/lodash.transform": "^4.6.6",
     "@xcritical/eslint-plugin-xc-front-lint": "^1.0.1",
     "@xcritical/xc-front-libs-utils": "^1.0.0",
     "jest": "^24.9.0",
@@ -34,6 +35,7 @@
     ]
   },
   "dependencies": {
-    "kind-of": "^6.0.2"
+    "kind-of": "^6.0.2",
+    "lodash.transform": "^4.6.0"
   }
 }

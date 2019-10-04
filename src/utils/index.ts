@@ -20,3 +20,4 @@ export {
 };
 
 export * from './isObject';
+export * from './difference';
