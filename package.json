@@ -32,6 +32,30 @@
     "lint-staged": "^9.4.0",
     "ts-jest": "^24.1.0"
   },
+  "keywords": [
+    "clone",
+    "clone-deep",
+    "copy",
+    "deep",
+    "deep-clone",
+    "deep-merge",
+    "extend",
+    "key",
+    "keys",
+    "merge",
+    "merge-deep",
+    "object",
+    "objects",
+    "prop",
+    "properties",
+    "property",
+    "props",
+    "value",
+    "values",
+    "delete",
+    "set",
+    "deep-set"
+  ],
   "lint-staged": {
     "*.{js,ts}": [
       "yarn lint:fix",

@@ -4,7 +4,7 @@ import set from 'lodash.set';
 import { AllType } from '../interfaces';
 
 
-export const delIn = (obj: AllType, path: string | string[]): any => {
+export const delIn = (obj: AllType, path: string | string[]): AllType => {
   const pathArr = toPath(path);
   if (pathArr.length === 1) {
     if (Array.isArray(obj)) {
