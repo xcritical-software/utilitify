@@ -21,8 +21,10 @@
   "devDependencies": {
     "@types/jest": "^24.0.18",
     "@types/kind-of": "^6.0.0",
+    "@types/lodash.findindex": "^4.6.6",
     "@types/lodash.get": "^4.4.6",
     "@types/lodash.isnumber": "^3.0.6",
+    "@types/lodash.omit": "^4.5.6",
     "@types/lodash.set": "^4.3.6",
     "@types/lodash.topath": "^4.5.6",
     "@types/lodash.transform": "^4.6.6",
@@ -64,8 +66,10 @@
   },
   "dependencies": {
     "kind-of": "^6.0.2",
+    "lodash.findindex": "^4.6.0",
     "lodash.get": "^4.4.2",
     "lodash.isnumber": "^3.0.3",
+    "lodash.omit": "^4.5.0",
     "lodash.set": "^4.3.2",
     "lodash.topath": "^4.5.2",
     "lodash.transform": "^4.6.0"
