@@ -26,3 +26,4 @@ export * from './difference';
 export * from './delIn';
 export * from './setIn';
 export * from './utils';
+export * from './string';

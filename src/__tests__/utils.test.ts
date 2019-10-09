@@ -1,12 +1,12 @@
 import {
   isNil,
+  isNull,
+  isUndefined,
   getObjectWithoutEmptyPropsFrom,
-  getTruncatedString,
+  getObjectWithoutUndefinedPropsFrom,
   upsertObjectToArray,
   getObjectFromArrayByProp,
   getArrayOfObjectsWithoutProp,
-  isJsonString,
-  getJsonFromString,
 } from '../utils';
 
 
@@ -28,17 +28,31 @@ describe('This is the tests for the "utils"', () => {
     expect(isNil(undefined)).toEqual(true);
   });
 
+  test('isNull checking', () => {
+    expect(isNull(1)).toEqual(false);
+    expect(isNull(null)).toEqual(true);
+    expect(isNull(undefined)).toEqual(false);
+  });
+
+  test('isUndefined checking', () => {
+    expect(isUndefined(1)).toEqual(false);
+    expect(isUndefined(undefined)).toEqual(true);
+    expect(isUndefined(null)).toEqual(false);
+  });
+
   test('getObjectWithoutEmptyPropsFrom checking', () => {
     expect(getObjectWithoutEmptyPropsFrom(objectWithEmptyProps))
       .toEqual({ a: 1, c: 'string' });
   });
 
-  test('getTruncatedString checking', () => {
-    expect(getTruncatedString('longString', 4)).toEqual('long');
-    expect(getTruncatedString('longString', 4, '...')).toEqual('long...');
-    expect(getTruncatedString('', 4)).toEqual('');
-    expect(getTruncatedString('short', 6)).toEqual('short');
-    expect(getTruncatedString(null, 6)).toEqual('');
+  test('getObjectWithoutUndefinedPropsFrom checking', () => {
+    expect(getObjectWithoutUndefinedPropsFrom(objectWithEmptyProps))
+      .toEqual({
+        a: 1,
+        b: null,
+        c: 'string',
+        e: '',
+      });
   });
 
   test('upsertObjectToArray checking', () => {
@@ -57,15 +71,5 @@ describe('This is the tests for the "utils"', () => {
   test('getArrayOfObjectsWithoutProp checking', () => {
     const arr = [{ a: 1, c: 10 }, { b: 2 }];
     expect(getArrayOfObjectsWithoutProp(arr, 'a')).toEqual([{ c: 10 }, { b: 2 }]);
-  });
-
-  test('isJsonString checking', () => {
-    expect(isJsonString('a')).toEqual(false);
-    expect(isJsonString('{"e":2}')).toEqual(true);
-  });
-
-  test('getJsonFromString checking', () => {
-    expect(getJsonFromString('a')).toEqual({});
-    expect(getJsonFromString('{"e":2}')).toEqual({ e: 2 });
   });
 });

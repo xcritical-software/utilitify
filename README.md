@@ -148,6 +148,34 @@ isNil(null);
 //=> true
 ```
 
+#### `isNull`
+
+> Check if any JavaScript value is null.
+
+```js
+import { isNull } from 'utilitify';
+
+isNull(undefined);
+//=> false
+
+isNull(null);
+//=> true
+```
+
+#### `isUndefined`
+
+> Check if any JavaScript value is undefined.
+
+```js
+import { isUndefined } from 'utilitify';
+
+isUndefined(null);
+//=> false
+
+isUndefined(undefined);
+//=> true
+```
+
 #### `getObjectWithoutEmptyPropsFrom`
 
 > Remove from object all values which equal 'null', 'undefined' or empty string.
@@ -165,6 +193,25 @@ const objectWithEmptyProps = {
 
 getObjectWithoutEmptyPropsFrom(objectWithEmptyProps);
 //=> { a: 1, c: 'string' }
+```
+
+#### `getObjectWithoutUndefinedPropsFrom`
+
+> Remove from object all values which equal 'undefined'.
+
+```js
+import { getObjectWithoutUndefinedPropsFrom } from 'utilitify';
+
+const objectWithUndefinedProps = {
+  a: 1,
+  b: null,
+  c: 'string',
+  d: undefined,
+  e: '',
+};
+
+getObjectWithoutUndefinedPropsFrom(objectWithUndefinedProps);
+//=> { a: 1, b: null, c: 'string', e: '' }
 ```
 
 #### `getTruncatedString`
@@ -251,6 +298,17 @@ getJsonFromString(invalidStr);
 //=> {}
 ```
 
+#### `toPascalCase`
+
+> Convert any string to 'PascalCase' string.
+
+```js
+import { toPascalCase } from 'utilitify';
+
+toPascalCase('pascal case');
+//=> PascalCase
+```
+
 #### `compose`
 
 > Compose several functions which return some result.
@@ -258,9 +316,95 @@ getJsonFromString(invalidStr);
 ```js
 import { compose } from 'utilitify';
 
-const inc = (value: number): number => value + 1;
-const mul2 = (value: number): number => value * 2;
+const inc = (value) => value + 1;
+const mul2 = (value) => value * 2;
 
 compose(inc, mul2)(1);
 //=> 4
+```
+
+#### `setIn`
+
+> Set new value (second argument) in object by property (third argument) and return new object.
+
+```js
+import { setIn } from 'utilitify';
+
+const obj = {
+  a: 1,
+  b: 2,
+  c: {
+    d: 3,
+  },
+};
+
+const result = setIn(obj, 5, 'd.f.r');
+console.log(result);
+//=> { a: 1, b: 2, c: { d: 3 }, d: { f: { r: 5 } } }
+```
+
+#### `delIn`
+
+> Delete property (second argument) in object and return new object.
+
+```js
+import { delIn } from 'utilitify';
+
+const obj = {
+  a: 1,
+  b: 2,
+  c: {
+    d: 3,
+  },
+};
+
+const result = delIn(obj, 'c.d');
+console.log(result);
+//=> { a: 1, b: 2, c: {} }
+```
+
+#### `difference`
+
+> Compare two objects (or arrays) and return a new object (or array) who represent the diff.
+
+```js
+import { difference } from 'utilitify';
+
+const obj = {
+  a: 1,
+  b: 2,
+  c: {
+    d: 3,
+  },
+};
+
+const obj2 = {
+  c: {
+    d: {
+      f: 5,
+    },
+  },
+  g: 5,
+};
+
+const testObj = { ...obj, ...obj2 };
+
+const result = difference(obj, testObj);
+console.log(result);
+//=> { c: { d: 3 } }
+```
+
+#### `isDifference`
+
+> Compare two objects (or arrays) and return 'true' if equal or 'false' if not.
+
+```js
+import { isDifference } from 'utilitify';
+
+const arr1 = [1, 2, 3];
+
+const arr2 = [2, 3, 4];
+
+isDifference(arr1, arr2);
+//=> true
 ```
