@@ -1,3 +1,5 @@
+export type Maybe<T> = T | null | undefined;
+
 export type TypedArray = Int8Array | Uint8Array | Uint8ClampedArray | Int16Array | Uint16Array
 | Int32Array | Uint32Array | Float32Array | Float64Array;
 
@@ -19,4 +21,8 @@ export interface ITypedArrayConstructor {
 
 export interface IKeyValue<T> {
   [key: string]: T;
+}
+
+export interface IJson {
+  [key: string]: AllType;
 }

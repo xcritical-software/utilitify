@@ -118,7 +118,7 @@ union(['a', 'a'], ['b', 'c']);
 
 #### `isObject`
 
-> Check if any JavaScript value is object
+> Check if any JavaScript value is object.
 
 ```js
 import { isObject } from 'utilitify';
@@ -130,4 +130,137 @@ isObject(obj);
 
 isObject(1);
 //=> false
+```
+
+#### `isNil`
+
+> Check if any JavaScript value is null or undefined.
+
+```js
+import { isNil } from 'utilitify';
+
+const obj = { a: 1, b: 2 };
+
+isNil(obj);
+//=> false
+
+isNil(null);
+//=> true
+```
+
+#### `getObjectWithoutEmptyPropsFrom`
+
+> Remove from object all values which equal 'null', 'undefined' or empty string.
+
+```js
+import { getObjectWithoutEmptyPropsFrom } from 'utilitify';
+
+const objectWithEmptyProps = {
+  a: 1,
+  b: null,
+  c: 'string',
+  d: undefined,
+  e: '',
+};
+
+getObjectWithoutEmptyPropsFrom(objectWithEmptyProps);
+//=> { a: 1, c: 'string' }
+```
+
+#### `getTruncatedString`
+
+> Get truncated string by number of symbols (second argument) with punctuation mark on the end if need.
+
+```js
+import { getTruncatedString } from 'utilitify';
+
+getTruncatedString('string', 3);
+//=> str
+
+getTruncatedString('string', 3, '...');
+//=> str...
+```
+
+#### `upsertObjectToArray`
+
+> Update object in array. If object does not exist, method push new value (third argument) to array.
+
+```js
+import { upsertObjectToArray } from 'utilitify';
+
+const arr = [{ a: 1 }, { b: 2 }];
+
+upsertObjectToArray(arr, { a: 1 }, { a: 3 });
+console.log(arr);
+//=> [{ a: 3 }, { b: 2 }]
+```
+
+#### `getObjectFromArrayByProp`
+
+> Get object from array by it's property.
+
+```js
+import { getObjectFromArrayByProp } from 'utilitify';
+
+const arr = [{ a: 1 }, { b: 2 }];
+
+getObjectFromArrayByProp(arr, 'a');
+//=> { a: 1 }
+```
+
+#### `getArrayOfObjectsWithoutProp`
+
+> Get new array of objects from which are deleted property (second argument).
+
+```js
+import { getArrayOfObjectsWithoutProp } from 'utilitify';
+
+const arr = [{ a: 1, c: 10 }, { b: 2 }];
+
+getArrayOfObjectsWithoutProp(arr, 'a');
+//=> [{ c: 10 }, { b: 2 }]
+```
+
+#### `isJsonString`
+
+> Check if string is JSON.
+
+```js
+import { isJsonString } from 'utilitify';
+
+const str = '{"a":2}';
+
+isJsonString(str);
+//=> true
+```
+
+#### `getJsonFromString`
+
+> Get JSON from string if possibly. If string is not valid JSON string, method returns empty object.
+
+```js
+import { getJsonFromString } from 'utilitify';
+
+const validStr = '{"a":2}';
+const invalidStr = '{a:2}';
+
+getJsonFromString(validStr);
+//=> { a: 2 }
+
+getJsonFromString(invalidStr);
+//=> {}
+```
+
+#### `compose`
+
+> Compose several functions which return some result.
+
+```js
+import { compose } from 'utilitify';
+
+const inc = (value: number): number => value + 1;
+const mul2 = (value: number): number => value * 2;
+
+compose(inc, mul2)(1);
+//=> 4
 ```

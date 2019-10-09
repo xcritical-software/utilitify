@@ -4,6 +4,7 @@ import cloneShallow, {
   cloneRegExp, cloneArrayBuffer, cloneTypedArray, cloneSymbol,
 } from './cloneShallow';
 import mergeDeep from './mergeDeep';
+import compose from './compose';
 
 
 export {
@@ -17,9 +18,11 @@ export {
   cloneTypedArray,
   cloneSymbol,
   mergeDeep,
+  compose,
 };
 
 export * from './isObject';
 export * from './difference';
 export * from './delIn';
 export * from './setIn';
+export * from './utils';
