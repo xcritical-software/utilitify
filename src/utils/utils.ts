@@ -2,14 +2,22 @@ import findIndex from 'lodash.findindex';
 import omit from 'lodash.omit';
 
 import compose from './compose';
-import { AllType, IJson, Maybe } from '../interfaces';
+import { AllType } from '../interfaces';
 
 
 export function isNil(value: AllType): boolean {
   return value == null;
 }
 
-export function getObjectWithoutEmptyPropsFrom(object: object): AllType {
+export function isNull(value: AllType): boolean {
+  return value === null;
+}
+
+export function isUndefined(value: AllType): boolean {
+  return value === undefined;
+}
+
+export function getObjectWithoutEmptyPropsFrom(object: object): object {
   return compose(
     (obj: object): object => {
       const result = {};
@@ -42,16 +50,16 @@ export function getObjectWithoutEmptyPropsFrom(object: object): AllType {
   )(object);
 }
 
-export function getTruncatedString(
-  str: string,
-  length: number,
-  punctuationMark?: Maybe<string>,
-): string {
-  if (isNil(str)) return '';
-  if (str.length <= length) return str;
-  return punctuationMark
-    ? `${str.substring(0, length)}${punctuationMark}`
-    : `${str.substring(0, length)}`;
+export function getObjectWithoutUndefinedPropsFrom(object: object): object {
+  const result = {};
+
+  Object.keys(object).forEach((key: string) => {
+    if (!isUndefined(object[key])) {
+      result[key] = object[key];
+    }
+  });
+
+  return result;
 }
 
 export function upsertObjectToArray(arr: AllType[], prop: object, newVal: AllType): void {
@@ -75,26 +83,4 @@ export function getObjectFromArrayByProp(arr: AllType[], prop: string): AllType 
 
 export function getArrayOfObjectsWithoutProp(arr: AllType[], propName: string): AllType[] {
   return arr.map(obj => omit(obj, [propName]));
-}
-
-export function isJsonString(str: string): boolean {
-  try {
-    JSON.parse(str);
-  } catch (e) {
-    return false;
-  }
-
-  return true;
-}
-
-export function getJsonFromString(str: string): IJson {
-  let result;
-
-  try {
-    result = JSON.parse(str);
-  } catch (e) {
-    return {};
-  }
-
-  return result;
 }
