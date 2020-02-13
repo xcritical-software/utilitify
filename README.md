@@ -1,7 +1,7 @@
 # utilitify
 > The utilities for working with a collections such as objects, arrays and primitives such as numbers, strings, etc.
 
-[![Build Status](https://travis-ci.org/xcritical-software/utilitify.svg?branch=master)](https://travis-ci.org/xcritical-software/utilitify)
+[![Build Status](https://travis-ci.com/xcritical-software/utilitify.svg?branch=master)](https://travis-ci.com/xcritical-software/utilitify)
 
 ## Install
 
