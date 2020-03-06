@@ -1,7 +1,24 @@
+/* eslint-disable @typescript-eslint/ban-ts-ignore */
 import { mergeDeep } from '../utils';
 
 
 describe('This is the tests for the "merge deep" util', () => {
+  test('should not merge the __proto__ property', () => {
+    const src = JSON.parse('{ "__proto__": { "xxx": "polluted" } }');
+    const dst = {};
+
+    mergeDeep(dst, src);
+    // @ts-ignore
+    if (typeof dst.__proto__ !== 'undefined') { // eslint-disable-line
+      // Should not overwrite the __proto__ property or pollute the Object prototype
+      // @ts-ignore
+      expect(dst.__proto__).toBe(Object.prototype); // eslint-disable-line
+    }
+
+    // @ts-ignore
+    expect(({}).xxx).toBeUndefined();
+  });
+
   test('Merge two objects', () => {
     expect(mergeDeep({ a: 1, b: 2 }, { b: 3, c: 4 })).toEqual({ a: 1, b: 3, c: 4 });
 
