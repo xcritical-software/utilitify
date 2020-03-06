@@ -1,6 +1,6 @@
 {
   "name": "utilitify",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The utilities for working with a collections such as objects, arrays and primitives such as numbers, strings, etc.",
   "main": "index.js",
   "repository": "https://github.com/xcritical-software/utilitify.git",
