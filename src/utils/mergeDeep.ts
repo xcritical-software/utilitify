@@ -4,17 +4,20 @@ import { isObject } from './isObject';
 import { AllType } from '../interfaces';
 
 
+const checkValidKeys = (key: string): boolean => key !== '__proto__' && key !== 'constructor' && key !== 'prototype';
+
 const merge = (target: AllType, obj: AllType): AllType => {
   Object.keys(obj).forEach((key: string): void => {
-    const oldVal = obj[key];
-    const newVal = target[key];
-
-    if (isObject(newVal) && isObject(oldVal)) {
-      target[key] = merge(newVal, oldVal);
-    } else if (Array.isArray(newVal)) {
-      target[key] = union([], newVal, oldVal);
-    } else {
-      target[key] = cloneDeep(oldVal);
+    if (checkValidKeys(key)) {
+      const oldVal = obj[key];
+      const newVal = target[key];
+      if (isObject(newVal) && isObject(oldVal)) {
+        target[key] = merge(newVal, oldVal);
+      } else if (Array.isArray(newVal)) {
+        target[key] = union([], newVal, oldVal);
+      } else {
+        target[key] = cloneDeep(oldVal);
+      }
     }
   });
 
