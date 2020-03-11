@@ -1,6 +1,6 @@
 {
   "name": "utilitify",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "The utilities for working with a collections such as objects, arrays and primitives such as numbers, strings, etc.",
   "main": "index.js",
   "repository": "https://github.com/xcritical-software/utilitify.git",
@@ -19,7 +19,7 @@
   },
   "private": false,
   "devDependencies": {
-    "@types/jest": "^24.0.18",
+    "@types/jest": "^25.1.2",
     "@types/kind-of": "^6.0.0",
     "@types/lodash.findindex": "^4.6.6",
     "@types/lodash.get": "^4.4.6",
@@ -30,9 +30,9 @@
     "@types/lodash.transform": "^4.6.6",
     "@xcritical/eslint-plugin-xc-front-lint": "^1.0.1",
     "@xcritical/xc-front-libs-utils": "^1.0.0",
-    "jest": "^24.9.0",
+    "jest": "^25.1.0",
     "lint-staged": "^10.0.8",
-    "ts-jest": "^24.1.0"
+    "ts-jest": "^25.2.0"
   },
   "keywords": [
     "clone",
