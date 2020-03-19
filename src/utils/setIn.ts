@@ -3,6 +3,11 @@ import isNumber from 'lodash.isnumber';
 import { AllType } from 'src/interfaces';
 
 
+type Many<T> = T | readonly T[];
+
+type PropertyName = string | number | symbol;
+type PropertyPath = Many<PropertyName>;
+
 export const setInWithPath = (obj: AllType,
   value: any,
   path: string | string[],
@@ -33,8 +38,10 @@ export const setInWithPath = (obj: AllType,
   return result;
 };
 
-export const setIn = (
-  obj: AllType,
-  value: any,
-  field: string | string[],
-): any => setInWithPath(obj, value, toPath(field), 0);
+export function setIn<TReturn, TValue>(
+  obj: TReturn,
+  value: TValue,
+  field: PropertyPath,
+): TReturn {
+  return setInWithPath(obj, value, toPath(field), 0);
+}
