@@ -19,7 +19,7 @@
   },
   "private": false,
   "devDependencies": {
-    "@types/jest": "^25.1.2",
+    "@types/jest": "^26.0.4",
     "@types/kind-of": "^6.0.0",
     "@types/lodash.findindex": "^4.6.6",
     "@types/lodash.get": "^4.4.6",
