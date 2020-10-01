@@ -1,0 +1,2095 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.7.13",
+    "schemaVersion": 1003,
+    "oldestForwardsCompatibleVersion": 1001
+  },
+  "kind": "Package",
+  "canonicalReference": "utilitify!",
+  "docComment": "",
+  "name": "utilitify",
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "utilitify!",
+      "name": "",
+      "members": [
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "utilitify!AllType:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type AllType = "
+            },
+            {
+              "kind": "Content",
+              "text": "undefined | null | boolean | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Buffer",
+              "canonicalReference": "!Buffer:class"
+            },
+            {
+              "kind": "Content",
+              "text": " | number | string | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Date",
+              "canonicalReference": "!Date:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "RegExp",
+              "canonicalReference": "!RegExp:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Error",
+              "canonicalReference": "!Error:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Iterator",
+              "canonicalReference": "!Iterator:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any> | any[] | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Function",
+              "canonicalReference": "!Function:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any> | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Map",
+              "canonicalReference": "!Map:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any, any> | "
+            },
+            {
+              "kind": "Reference",
+              "text": "WeakMap",
+              "canonicalReference": "!WeakMap:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any, any> | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Set",
+              "canonicalReference": "!Set:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any> | "
+            },
+            {
+              "kind": "Reference",
+              "text": "WeakSet",
+              "canonicalReference": "!WeakSet:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any> | "
+            },
+            {
+              "kind": "Reference",
+              "text": "TypedArray",
+              "canonicalReference": "utilitify!TypedArray:type"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "IKeyValue",
+              "canonicalReference": "utilitify!IKeyValue:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any> | any"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "AllType",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 28
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "utilitify!cloneArrayBuffer:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "cloneArrayBuffer: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: "
+            },
+            {
+              "kind": "Reference",
+              "text": "ArrayBuffer",
+              "canonicalReference": "!ArrayBuffer:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => "
+            },
+            {
+              "kind": "Reference",
+              "text": "ArrayBuffer",
+              "canonicalReference": "!ArrayBuffer:interface"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "cloneArrayBuffer",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "utilitify!cloneArrayDeep:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "cloneArrayDeep: "
+            },
+            {
+              "kind": "Content",
+              "text": "(arr: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "[], instanceClone?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Function",
+              "canonicalReference": "!Function:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | undefined) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "[]"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "cloneArrayDeep",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 8
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "utilitify!cloneDeep:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "cloneDeep: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ", instanceClone?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Function",
+              "canonicalReference": "!Function:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | undefined) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "cloneDeep",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 7
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "utilitify!cloneObjectDeep:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "cloneObjectDeep: "
+            },
+            {
+              "kind": "Content",
+              "text": "(obj: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ", instanceClone?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Function",
+              "canonicalReference": "!Function:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | undefined) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "cloneObjectDeep",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 7
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "utilitify!cloneRegExp:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "cloneRegExp: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: "
+            },
+            {
+              "kind": "Reference",
+              "text": "RegExp",
+              "canonicalReference": "!RegExp:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => "
+            },
+            {
+              "kind": "Reference",
+              "text": "RegExp",
+              "canonicalReference": "!RegExp:interface"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "cloneRegExp",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "utilitify!cloneShallow:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "cloneShallow: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ") => "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "cloneShallow",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "utilitify!cloneSymbol:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "cloneSymbol: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: symbol) => symbol"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "cloneSymbol",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "utilitify!cloneTypedArray:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "cloneTypedArray: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: "
+            },
+            {
+              "kind": "Reference",
+              "text": "TypedArray",
+              "canonicalReference": "utilitify!TypedArray:type"
+            },
+            {
+              "kind": "Content",
+              "text": ") => "
+            },
+            {
+              "kind": "Reference",
+              "text": "TypedArray",
+              "canonicalReference": "utilitify!TypedArray:type"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "cloneTypedArray",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "utilitify!compose:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "compose: "
+            },
+            {
+              "kind": "Content",
+              "text": "(...funcs: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Function",
+              "canonicalReference": "!Function:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "[]) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "compose",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "utilitify!delIn:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "delIn: "
+            },
+            {
+              "kind": "Content",
+              "text": "(obj: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ", path: string | string[]) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "delIn",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 5
+          }
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "utilitify!difference:function(1)",
+          "docComment": "/**\n * Deep diff between two object, using lodash\n *\n * @param object - Object compared\n *\n * @param base - Object to compare with  @return {Object} Return a new object who represent the diff\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function difference<T>(object: "
+            },
+            {
+              "kind": "Content",
+              "text": "T"
+            },
+            {
+              "kind": "Content",
+              "text": ", base?: "
+            },
+            {
+              "kind": "Content",
+              "text": "T | any[] | object"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "T | T[] | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Record",
+              "canonicalReference": "!Record:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<string, any>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 8
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "object",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "parameterName": "base",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              }
+            }
+          ],
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "name": "difference"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "utilitify!getArrayOfObjectsWithoutProp:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function getArrayOfObjectsWithoutProp(arr: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "[]"
+            },
+            {
+              "kind": "Content",
+              "text": ", propName: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "[]"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 6,
+            "endIndex": 8
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "arr",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "parameterName": "propName",
+              "parameterTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              }
+            }
+          ],
+          "name": "getArrayOfObjectsWithoutProp"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "utilitify!getJsonFromString:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function getJsonFromString(str: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "IJson",
+              "canonicalReference": "utilitify!IJson:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "str",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "getJsonFromString"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "utilitify!getObjectFromArrayByProp:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function getObjectFromArrayByProp(arr: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "[]"
+            },
+            {
+              "kind": "Content",
+              "text": ", prop: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 6,
+            "endIndex": 7
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "arr",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "parameterName": "prop",
+              "parameterTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              }
+            }
+          ],
+          "name": "getObjectFromArrayByProp"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "utilitify!getObjectWithoutEmptyPropsFrom:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function getObjectWithoutEmptyPropsFrom(object: "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "object",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "getObjectWithoutEmptyPropsFrom"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "utilitify!getObjectWithoutUndefinedPropsFrom:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function getObjectWithoutUndefinedPropsFrom(object: "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "object",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "getObjectWithoutUndefinedPropsFrom"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "utilitify!getTruncatedString:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function getTruncatedString(str: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ", length: "
+            },
+            {
+              "kind": "Content",
+              "text": "number"
+            },
+            {
+              "kind": "Content",
+              "text": ", punctuationMark?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Maybe",
+              "canonicalReference": "utilitify!Maybe:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<string>"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 8,
+            "endIndex": 9
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "str",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "parameterName": "length",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              }
+            },
+            {
+              "parameterName": "punctuationMark",
+              "parameterTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 7
+              }
+            }
+          ],
+          "name": "getTruncatedString"
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "utilitify!IArrayBufferConstructor:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface IArrayBufferConstructor "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "IArrayBufferConstructor",
+          "members": [
+            {
+              "kind": "ConstructSignature",
+              "canonicalReference": "utilitify!IArrayBufferConstructor:new(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "new (byteLength: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ArrayBuffer",
+                  "canonicalReference": "!ArrayBuffer:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "byteLength",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "utilitify!IJson:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface IJson "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "IJson",
+          "members": [
+            {
+              "kind": "IndexSignature",
+              "canonicalReference": "utilitify!IJson:index(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "[key: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "]: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "AllType",
+                  "canonicalReference": "utilitify!AllType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "key",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "utilitify!IKeyValue:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface IKeyValue<T> "
+            }
+          ],
+          "releaseTag": "Public",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "name": "IKeyValue",
+          "members": [
+            {
+              "kind": "IndexSignature",
+              "canonicalReference": "utilitify!IKeyValue:index(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "[key: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "]: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "T"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "key",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "utilitify!IRegExpConstructor:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface IRegExpConstructor "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "IRegExpConstructor",
+          "members": [
+            {
+              "kind": "ConstructSignature",
+              "canonicalReference": "utilitify!IRegExpConstructor:new(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "new (source: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", flags: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RegExp",
+                  "canonicalReference": "!RegExp:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "source",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                },
+                {
+                  "parameterName": "flags",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  }
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "utilitify!isDifference:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isDifference(object: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", base?: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "object",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "parameterName": "base",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              }
+            }
+          ],
+          "name": "isDifference"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "utilitify!isJsonString:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isJsonString(str: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "str",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "isJsonString"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "utilitify!isNil:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isNil(value: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "isNil"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "utilitify!isNull:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isNull(value: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "isNull"
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "utilitify!isObject:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isObject: "
+            },
+            {
+              "kind": "Content",
+              "text": "(val: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ") => boolean"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "isObject",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "utilitify!isObjectObject:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isObjectObject: "
+            },
+            {
+              "kind": "Content",
+              "text": "(o: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ") => boolean"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "isObjectObject",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "utilitify!isPlainObject:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "isPlainObject: "
+            },
+            {
+              "kind": "Content",
+              "text": "(o: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ") => boolean"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "isPlainObject",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "utilitify!isUndefined:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isUndefined(value: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "isUndefined"
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "utilitify!ITypedArrayConstructor:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface ITypedArrayConstructor "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "ITypedArrayConstructor",
+          "members": [
+            {
+              "kind": "ConstructSignature",
+              "canonicalReference": "utilitify!ITypedArrayConstructor:new(1)",
+              "docComment": "",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "new (buffer: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ArrayBuffer",
+                  "canonicalReference": "!ArrayBuffer:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", byteOffset: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", length: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TypedArray",
+                  "canonicalReference": "utilitify!TypedArray:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "returnTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 8
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "buffer",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  }
+                },
+                {
+                  "parameterName": "byteOffset",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  }
+                },
+                {
+                  "parameterName": "length",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  }
+                }
+              ]
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "utilitify!Maybe:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type Maybe<T> = "
+            },
+            {
+              "kind": "Content",
+              "text": "T | null | undefined"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "Maybe",
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "utilitify!mergeDeep:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "mergeDeep: "
+            },
+            {
+              "kind": "Content",
+              "text": "(orig: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": ", ...rest: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "[]) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "mergeDeep",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 7
+          }
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "utilitify!setIn:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function setIn<TReturn, TValue>(obj: "
+            },
+            {
+              "kind": "Content",
+              "text": "TReturn"
+            },
+            {
+              "kind": "Content",
+              "text": ", value: "
+            },
+            {
+              "kind": "Content",
+              "text": "TValue"
+            },
+            {
+              "kind": "Content",
+              "text": ", field: "
+            },
+            {
+              "kind": "Reference",
+              "text": "PropertyPath",
+              "canonicalReference": "utilitify!~PropertyPath:type"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "TReturn"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 7,
+            "endIndex": 8
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "obj",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              }
+            },
+            {
+              "parameterName": "field",
+              "parameterTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              }
+            }
+          ],
+          "typeParameters": [
+            {
+              "typeParameterName": "TReturn",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            },
+            {
+              "typeParameterName": "TValue",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "name": "setIn"
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "utilitify!setInWithPath:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "setInWithPath: "
+            },
+            {
+              "kind": "Content",
+              "text": "(obj: any, value: any, path: string | string[], pathIndex: number) => any"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "setInWithPath",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "utilitify!toPascalCase:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function toPascalCase(string: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "string",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "name": "toPascalCase"
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "utilitify!TypedArray:type",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare type TypedArray = "
+            },
+            {
+              "kind": "Reference",
+              "text": "Int8Array",
+              "canonicalReference": "!Int8Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Uint8Array",
+              "canonicalReference": "!Uint8Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Uint8ClampedArray",
+              "canonicalReference": "!Uint8ClampedArray:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Int16Array",
+              "canonicalReference": "!Int16Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Uint16Array",
+              "canonicalReference": "!Uint16Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Int32Array",
+              "canonicalReference": "!Int32Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Uint32Array",
+              "canonicalReference": "!Uint32Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Float32Array",
+              "canonicalReference": "!Float32Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "Float64Array",
+              "canonicalReference": "!Float64Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "TypedArray",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 18
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "utilitify!union:var",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "union: "
+            },
+            {
+              "kind": "Content",
+              "text": "(init: "
+            },
+            {
+              "kind": "Reference",
+              "text": "United",
+              "canonicalReference": "utilitify!~United:type"
+            },
+            {
+              "kind": "Content",
+              "text": "[], ...rest: "
+            },
+            {
+              "kind": "Reference",
+              "text": "United",
+              "canonicalReference": "utilitify!~United:type"
+            },
+            {
+              "kind": "Content",
+              "text": "[]) => "
+            },
+            {
+              "kind": "Reference",
+              "text": "United",
+              "canonicalReference": "utilitify!~United:type"
+            },
+            {
+              "kind": "Content",
+              "text": "[]"
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "union",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 8
+          }
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "utilitify!upsertObjectToArray:function(1)",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function upsertObjectToArray(arr: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "[]"
+            },
+            {
+              "kind": "Content",
+              "text": ", prop: "
+            },
+            {
+              "kind": "Content",
+              "text": "object"
+            },
+            {
+              "kind": "Content",
+              "text": ", newVal: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AllType",
+              "canonicalReference": "utilitify!AllType:type"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "void"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "returnTypeTokenRange": {
+            "startIndex": 8,
+            "endIndex": 9
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "arr",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "parameterName": "prop",
+              "parameterTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              }
+            },
+            {
+              "parameterName": "newVal",
+              "parameterTypeTokenRange": {
+                "startIndex": 6,
+                "endIndex": 7
+              }
+            }
+          ],
+          "name": "upsertObjectToArray"
+        }
+      ]
+    }
+  ]
+}

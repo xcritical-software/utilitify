@@ -26,7 +26,8 @@ export function difference<T>(
     subBase: T | Record<string, any>,
     subMergedObject?: Record<string, any>,
   ): Record<string, any> {
-    return transform(subMergedObject, (result, _value, key) => {
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+    return transform(subMergedObject || {}, (result, _value, key) => {
       const value = subObject[key];
 
       if (!Object.prototype.hasOwnProperty.call(subBase, key)) {

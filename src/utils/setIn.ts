@@ -1,6 +1,5 @@
 import toPath from 'lodash.topath';
 import isNumber from 'lodash.isnumber';
-import { AllType } from 'src/interfaces';
 
 
 type Many<T> = T | readonly T[];
@@ -8,7 +7,7 @@ type Many<T> = T | readonly T[];
 type PropertyName = string | number | symbol;
 type PropertyPath = Many<PropertyName>;
 
-export const setInWithPath = (obj: AllType,
+export const setInWithPath = (obj: any,
   value: any,
   path: string | string[],
   pathIndex: number): any => {

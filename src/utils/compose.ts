@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-ignore */
 import { AllType } from '../interfaces';
 
 
@@ -10,9 +11,12 @@ const compose = (...funcs: Function[]): AllType => {
 
   return (...args: AllType[]): AllType => {
     let index = 1;
+
+    // @ts-ignore TS7041
     let result = len ? funcs[index - 1].apply(this, args) : args[0];
 
     while (index < len) {
+      // @ts-ignore TS7041
       result = funcs[index].call(this, result);
       index += 1;
     }

@@ -1,24 +1,33 @@
 {
   "name": "utilitify",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "The utilities for working with a collections such as objects, arrays and primitives such as numbers, strings, etc.",
-  "main": "index.js",
   "repository": "https://github.com/xcritical-software/utilitify.git",
   "author": "XCritical Software",
   "license": "MIT",
+  "main": "dist/index.js",
+	"source": "src/index.ts",
+	"module": "dist/popover.esm.js",
+	"types": "dist/typings.d.ts",
+	"files": [
+    "dist",
+    "src"
+	],
   "scripts": {
     "test": "jest --config=jest.config.js",
     "lint": "eslint --ext .ts src",
     "lint:fix": "yarn lint --fix",
-    "compile": "gulp --cwd . compile",
+    "compile": "tsdx build --format cjs,esm --verbose && api-extractor run --local",
     "build": "yarn clean && yarn compile",
-    "deploy": "npm publish .publish  --access public",
+    "deploy": "npm publish  --access public",
     "check": "yarn lint && yarn test",
     "clean": "rimraf dist lib .publish",
     "re-install": "yarn clean && rd /s/q node_modules && yarn"
   },
   "private": false,
   "devDependencies": {
+    "@microsoft/api-extractor": "7.7.13",
+    "tsdx": "^0.13.2",
     "@types/jest": "^25.1.2",
     "@types/kind-of": "^6.0.0",
     "@types/lodash.findindex": "^4.6.6",
@@ -73,5 +82,8 @@
     "lodash.set": "^4.3.2",
     "lodash.topath": "^4.5.2",
     "lodash.transform": "^4.6.0"
+  },
+  "resolutions": {
+    "typescript": "^3.7.2"
   }
 }
