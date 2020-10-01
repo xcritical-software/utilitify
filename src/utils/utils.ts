@@ -2,18 +2,17 @@ import findIndex from 'lodash.findindex';
 import omit from 'lodash.omit';
 
 import compose from './compose';
-import { AllType } from '../interfaces';
 
 
-export function isNil(value: AllType): boolean {
+export function isNil(value: any): boolean {
   return value == null;
 }
 
-export function isNull(value: AllType): boolean {
+export function isNull(value: any): boolean {
   return value === null;
 }
 
-export function isUndefined(value: AllType): boolean {
+export function isUndefined(value: any): boolean {
   return value === undefined;
 }
 
@@ -28,6 +27,7 @@ export function getObjectWithoutEmptyPropsFrom(object: object): object {
             if (obj[key] !== '') {
               result[key] = obj[key];
             }
+
             break;
           default:
             result[key] = obj[key];
@@ -62,8 +62,9 @@ export function getObjectWithoutUndefinedPropsFrom(object: object): object {
   return result;
 }
 
-export function upsertObjectToArray(arr: AllType[], prop: object, newVal: AllType): void {
+export function upsertObjectToArray(arr: any[], prop: object, newVal: any): void {
   const index = findIndex(arr, prop);
+
   if (index !== -1) {
     arr.splice(index, 1, newVal);
   } else {
@@ -71,7 +72,7 @@ export function upsertObjectToArray(arr: AllType[], prop: object, newVal: AllTyp
   }
 }
 
-export function getObjectFromArrayByProp(arr: AllType[], prop: string): AllType {
+export function getObjectFromArrayByProp(arr: any[], prop: string): any {
   const index = findIndex(arr, prop);
 
   if (index !== -1) {
@@ -81,6 +82,6 @@ export function getObjectFromArrayByProp(arr: AllType[], prop: string): AllType 
   return {};
 }
 
-export function getArrayOfObjectsWithoutProp(arr: AllType[], propName: string): AllType[] {
-  return arr.map(obj => omit(obj, [propName]));
+export function getArrayOfObjectsWithoutProp(arr: any[], propName: string): any[] {
+  return arr.map((obj) => omit(obj, [propName]));
 }

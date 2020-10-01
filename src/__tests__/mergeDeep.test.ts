@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/ban-ts-ignore */
 import { mergeDeep } from '../utils';
 

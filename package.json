@@ -37,7 +37,7 @@
     "@types/lodash.set": "^4.3.6",
     "@types/lodash.topath": "^4.5.6",
     "@types/lodash.transform": "^4.6.6",
-    "@xcritical/eslint-plugin-xc-front-lint": "^1.0.1",
+    "@xcritical/eslint-plugin-xcritical": "3.1.2",
     "@xcritical/xc-front-libs-utils": "^1.0.0",
     "jest": "^25.1.0",
     "lint-staged": "^10.0.7",

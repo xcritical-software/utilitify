@@ -1,4 +1,5 @@
 import transform from 'lodash.transform';
+
 import { isObject } from './isObject';
 
 /**
@@ -13,7 +14,7 @@ export function difference<T>(
   base: T | any[] | object = {},
 ): T | T[] | Record<string, any> {
   if (Array.isArray(object)) {
-    return object.filter(x => !(base as any[]).includes(x));
+    return object.filter((x) => !(base as any[]).includes(x));
   }
 
   const mergedObject = {
@@ -43,6 +44,7 @@ export function difference<T>(
       }
     });
   }
+
   return changes(object, base, mergedObject);
 }
 

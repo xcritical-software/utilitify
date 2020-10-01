@@ -12,9 +12,9 @@ import {
 
 const objectWithEmptyProps = {
   a: 1,
-  b: null as null,
+  b: null,
   c: 'string',
-  d: undefined as undefined,
+  d: undefined,
   e: '',
 };
 

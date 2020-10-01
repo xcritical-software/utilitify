@@ -21,14 +21,17 @@ export const setInWithPath = (obj: any,
   if (!obj) {
     const initialized = isNumber(first) ? [] : {};
     initialized[first] = next;
+
     return initialized;
   }
 
   if (Array.isArray(obj)) {
     const copy = [...obj];
     copy[first] = next;
+
     return copy;
   }
+
   const result = {
     ...obj,
     [first]: next,

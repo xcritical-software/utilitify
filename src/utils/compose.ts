@@ -1,15 +1,13 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/ban-ts-ignore */
-import { AllType } from '../interfaces';
-
-
-const compose = (...funcs: Function[]): AllType => {
+const compose = (...funcs: Function[]): any => {
   const len = funcs.length;
 
   if (funcs.some((func: Function) => typeof func !== 'function')) {
     throw new TypeError('Expected a function');
   }
 
-  return (...args: AllType[]): AllType => {
+  return (...args: any[]): any => {
     let index = 1;
 
     // @ts-ignore TS7041

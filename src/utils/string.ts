@@ -1,5 +1,6 @@
-import { isNil } from './utils';
 import { Maybe, IJson } from '../interfaces';
+
+import { isNil } from './utils';
 
 
 export function getTruncatedString(
@@ -8,7 +9,9 @@ export function getTruncatedString(
   punctuationMark?: Maybe<string>,
 ): string {
   if (isNil(str)) return '';
+
   if (str.length <= length) return str;
+
   return punctuationMark
     ? `${str.substring(0, length)}${punctuationMark}`
     : `${str.substring(0, length)}`;

@@ -2,10 +2,9 @@ import kindOf from 'kind-of';
 
 import { isObject } from './isObject';
 import cloneShallow from './cloneShallow';
-import { AllType } from '../interfaces';
 
 
-const cloneDeep = (val: AllType, instanceClone?: Function | undefined): AllType => {
+const cloneDeep = (val: any, instanceClone?: Function | undefined): any => {
   switch (kindOf(val)) {
     case 'object':
       return cloneObjectDeep(val, instanceClone); // eslint-disable-line
@@ -16,7 +15,7 @@ const cloneDeep = (val: AllType, instanceClone?: Function | undefined): AllType 
   }
 };
 
-export const cloneObjectDeep = (obj: AllType, instanceClone?: Function | undefined): AllType => {
+export const cloneObjectDeep = (obj: any, instanceClone?: Function | undefined): any => {
   if (isObject(obj)) {
     const res = Object.entries(obj).reduce((current, [key, value]) => {
       const clonedValue = cloneDeep(value, instanceClone);
@@ -37,8 +36,8 @@ export const cloneObjectDeep = (obj: AllType, instanceClone?: Function | undefin
   return obj;
 };
 
-export const cloneArrayDeep = (arr: AllType[], instanceClone?: Function | undefined): AllType[] => {
-  const res = arr.map((item: AllType) => cloneDeep(item, instanceClone));
+export const cloneArrayDeep = (arr: any[], instanceClone?: Function | undefined): any[] => {
+  const res = arr.map((item: any) => cloneDeep(item, instanceClone));
 
   return res;
 };
