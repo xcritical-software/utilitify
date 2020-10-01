@@ -19,7 +19,7 @@
     "lint:fix": "yarn lint --fix",
     "compile": "tsdx build --format cjs,esm --verbose && api-extractor run --local",
     "build": "yarn clean && yarn compile",
-    "deploy": "npm publish  --access public",
+    "deploy": "npm publish --access public",
     "check": "yarn lint && yarn test",
     "clean": "rimraf dist lib .publish",
     "re-install": "yarn clean && rd /s/q node_modules && yarn"

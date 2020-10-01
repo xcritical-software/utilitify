@@ -20,5 +20,5 @@ export interface IKeyValue<T> {
 }
 
 export interface IJson {
-  [key: string]: AllType;
+  [key: string]: any;
 }

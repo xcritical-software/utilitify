@@ -4,7 +4,7 @@ import { isNil } from './utils';
 
 
 export function getTruncatedString(
-  str: string,
+  str: string | null,
   length: number,
   punctuationMark?: Maybe<string>,
 ): string {

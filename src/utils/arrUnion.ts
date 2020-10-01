@@ -1,6 +1,6 @@
 type United = string | number | null | undefined | object;
 
-const union = (init: United[], ...rest: United[]): United[] => {
+const union = (init?: United[], ...rest: United[]): United[] => {
   if (!Array.isArray(init)) {
     throw new TypeError('arrUnion expects the first argument to be an array.');
   }

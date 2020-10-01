@@ -4,15 +4,15 @@ import omit from 'lodash.omit';
 import compose from './compose';
 
 
-export function isNil(value: any): boolean {
+export function isNil(value: any): value is null {
   return value == null;
 }
 
-export function isNull(value: any): boolean {
+export function isNull(value: any): value is null {
   return value === null;
 }
 
-export function isUndefined(value: any): boolean {
+export function isUndefined(value: any): value is undefined {
   return value === undefined;
 }
 
