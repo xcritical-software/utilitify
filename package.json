@@ -31,7 +31,7 @@
     "@xcritical/eslint-plugin-xc-front-lint": "^1.0.1",
     "@xcritical/xc-front-libs-utils": "^1.0.0",
     "jest": "^25.1.0",
-    "lint-staged": "^10.0.8",
+    "lint-staged": "^11.0.1",
     "ts-jest": "^25.2.0"
   },
   "keywords": [
